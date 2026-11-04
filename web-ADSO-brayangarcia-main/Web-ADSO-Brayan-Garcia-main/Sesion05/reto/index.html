@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscripción a Cursos Complementarios</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Inscripción Cursos Complementarios</h1>
+    
+    <form action="#" id="formInscripcion" class="formulario">
+      
+      <!-- Fieldset 1: Datos personales -->
+      <fieldset>
+        <legend>Datos personales</legend>
+
+        <div class="campo">
+          <label for="nombre">Nombre Completo</label>
+          <input type="text" id="nombre" name="nombre" required minlength="3">
+          <small id="error-nombre" class="error"></small>
+        </div>
+
+        <div class="campo">
+          <label for="documento">Documento</label>
+          <input type="text" id="documento" name="documento" inputmode="numeric" required 
+          minlength="6"
+          maxlength="10"
+          pattern="[0-9]{6,10}" 
+          title="Ingrese entre 6 y 10 dígitos numéricos">
+          <small id="error-documento" class="error"></small>
+        </div>
+
+        <div class="campo">
+          <label for="correo">Correo</label>
+          <input type="email" id="correo" name="correo" required>
+          <small id="error-correo" class="error"></small>
+        </div>
+
+        <div class="campo">
+          <label for="telefono">Celular</label>
+          <input type="tel" id="telefono" name="telefono" required
+          maxlength="10"
+          pattern="3[0-9]{9}" 
+          title="10 dígitos que empiecen por 3">
+          <small id="error-telefono" class="error"></small>
+        </div>
+      </fieldset>
+
+      <!-- Fieldset 2: Curso -->
+      <fieldset>
+        <legend>Curso</legend>
+
+        <div class="campo">
+          <label for="programa">Programa</label>
+          <select id="programa" name="programa" required>
+            <option value="">Elige un curso</option>
+            <option value="desarrollo-web">ADSO-analisis y desarrollo de software</option>
+            <option value="bases-datos">Sistemas</option>
+            <option value="python-basico">Automatización Industrial</option>
+          </select>
+          <small id="error-programa" class="error"></small>
+        </div>
+
+        <div class="campo grupo-jornada">
+          <label>Jornada</label>
+          <div class="opciones-radio">
+            <label class="opcion">
+              <input type="radio" name="jornada" value="mañana" checked> Mañana
+            </label>
+            <label class="opcion">
+              <input type="radio" name="jornada" value="tarde"> Tarde
+            </label>
+            <label class="opcion">
+              <input type="radio" name="jornada" value="noche"> Noche
+            </label>
+          </div>
+          <small id="error-jornada" class="error"></small>
+        </div>
+
+        <div class="campo-checkbox">
+          <label class="opcion-checkbox">
+            <input type="checkbox" id="terminos" name="terminos" required>
+            <span>Autorización de datos (Obligatorio)</span>
+          </label>
+          <small id="error-terminos" class="error"></small>
+        </div>
+      </fieldset>
+
+      <button type="submit" class="boton">Inscribirme</button>
+    </form>
+
+    <!-- Sección vacía solicitada después del formulario -->
+    <section id="resumen"></section>
+  </main>
+</body>
+</html>

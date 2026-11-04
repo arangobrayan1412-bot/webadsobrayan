@@ -1,0 +1,58 @@
+/* *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} */
+body{
+    font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+hr{
+    background-color: coral;
+    height: 5px;
+    width: 99%;
+}
+
+
+
+
+h1{
+    color: rgb(141, 7, 250);
+    font-size: 20px;
+}
+/* Cuando sea una class se usa el . */
+.destacado{
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-size: 30px;
+    background-color: rgb(13, 211, 23);
+}
+
+/* Cuando sea un id se usa el # */
+#estudio{
+    background-color: aquamarine;
+    color:rgb(247, 6, 118);
+}
+
+nav a{
+    text-decoration: none;
+    color:rgb(116, 5, 243)
+}
+
+h2, h3, h4{
+    color:tomato;
+}
+
+.destacado1 {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+#portada {
+  border: 4px solid #6f4e37;
+  border-radius: 12px;
+}
+h2 { color: blue; }
+.titulo-seccion { color: green; }
+h2 { color: red; }

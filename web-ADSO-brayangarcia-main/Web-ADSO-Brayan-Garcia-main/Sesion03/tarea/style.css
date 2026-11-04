@@ -1,0 +1,123 @@
+/* ==========================================================================
+   RESPUESTAS A LAS PREGUNTAS TEÓRICAS (Punto 5 de la tarea):
+   
+   - ¿Por qué es mejor un solo style.css que poner los estilos en cada página?
+     R// Es mejor porque centraliza los estilos del sitio web en un único lugar, 
+     facilitando enormemente el mantenimiento y garantizando una apariencia 
+     visual consistente. Si necesitas modificar un color o fuente, solo lo cambias 
+     una vez y se actualiza en todas las páginas, mejorando además la velocidad 
+     de carga al aprovechar la memoria caché del navegador.
+
+   - Si un h2 tiene una regla de etiqueta y otra de clase con colores distintos, 
+     ¿cuál gana y por qué?
+     R// Gana la regla de clase. Esto ocurre debido a la especificidad de CSS, 
+     donde los selectores de clase tienen un peso o prioridad mayor que los 
+     selectores de etiqueta simple.
+   ========================================================================== */
+
+/* 1. Estilos base y centrado general en tarjetas */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+  background-color: #f4f7f6;
+  margin: 0;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Contenedores principales en forma de tarjeta centrada */
+main, header, footer, section {
+  width: 100%;
+  max-width: 100000px;
+  background: #ffffff;
+  padding: 30px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* 2. Estilos decorativos para el menú (Selector descendiente nav a) */
+nav {
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #ffffff;
+  background-color: #8b0000; /* Rojo borgoña / Color apetitoso de negocio */
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav a:hover {
+  background-color: #d4ac0d; /* Tono dorado/amarillo al pasar el cursor */
+  color: #1a1a1a;
+  transform: translateY(-2px);
+}
+
+/* Encabezados decorativos */
+h1, h2, h3 {
+  color: #8b0000;
+  margin-top: 0;
+}
+
+h1 {
+  border-bottom: 3px solid #d4ac0d;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+/* 3. Estilos limpios y profesionales para la tabla de productos/menú */
+table {
+  width: 100%;
+  border-collapse: collapse; /* Elimina la separación doble de bordes */
+  margin: 20px 0;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+th, td {
+  border: 1px solid #e2e8f0;
+  padding: 14px 16px;
+  text-align: center;
+}
+
+th {
+  background-color: #8b0000; /* Encabezado de tabla */
+  color: #ffffff;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+tr:nth-child(even) {
+  background-color: #f8f9fa; /* Filas alternadas (efecto cebra) */
+}
+
+tr:hover {
+  background-color: #f1f5f9;
+  transition: background-color 0.2s ease;
+}
+
+/* Estilos para imágenes de las páginas */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 15px 0;
+}

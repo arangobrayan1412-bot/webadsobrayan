@@ -1,0 +1,184 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 2.5rem 1rem;
+  font-family: 'Poppins', Arial, sans-serif;
+  background-color: #f0f4f8;
+  color: #1e293b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+main {
+  width: 100%;
+  max-width: 560px;
+}
+
+h1 {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.formulario {
+  width: 100%;
+  padding: 2rem;
+  border-radius: 16px;
+  background-color: #ffffff;
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 
+              0 8px 10px -6px rgba(15, 23, 42, 0.04);
+  border: 1px solid #e2e8f0;
+}
+
+fieldset {
+  margin: 0 0 1.5rem;
+  padding: 1.25rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+}
+
+legend {
+  padding: 0 0.5rem;
+  font-weight: 600;
+  color: #0284c7;
+  font-size: 0.95rem;
+}
+
+.campo {
+  margin-bottom: 1rem;
+}
+
+.campo label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #334155;
+}
+
+/* Campos de ancho completo */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 8px;
+  font: inherit;
+  font-size: 0.95rem;
+  background-color: #f8fafc;
+  color: #0f172a;
+  transition: all 0.2s ease;
+}
+
+/* Foco visible */
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #38bdf8;
+  outline-offset: 2px;
+  border-color: #0284c7;
+  background-color: #ffffff;
+}
+
+.opciones-radio {
+  display: flex;
+  gap: 1.25rem;
+  margin-top: 0.3rem;
+}
+
+.opcion {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.opcion input[type="radio"] {
+  accent-color: #0284c7;
+  margin-right: 0.4rem;
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+}
+
+.campo-checkbox {
+  margin: 1rem 0 0.5rem;
+}
+
+.opcion-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  color: #334155;
+  cursor: pointer;
+}
+
+.opcion-checkbox input[type="checkbox"] {
+  accent-color: #0284c7;
+  width: 1.1rem;
+  height: 1.1rem;
+  cursor: pointer;
+}
+
+/* Mensajes de error */
+.error {
+  display: block;
+  min-height: 1.2rem;
+  color: #ef4444;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+}
+
+/* Estilos requeridos: rojo con :user-invalid y clase .invalido */
+input:user-invalid,
+select:user-invalid,
+input.invalido,
+select.invalido {
+  border-color: #ef4444;
+  background-color: #fef2f2;
+}
+
+.boton {
+  width: 100%;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #0284c7;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.boton:hover {
+  background-color: #0369a1;
+}
+
+.boton:active {
+  transform: scale(0.99);
+}
+
+.boton:focus-visible {
+  outline: 3px solid #38bdf8;
+  outline-offset: 2px;
+}
+
+/* Sección de resumen vacía requerida */
+#resumen {
+  margin-top: 1.5rem;
+}
